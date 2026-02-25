@@ -6,87 +6,102 @@
     <title>Mecánica de Sólidos | William Funes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --primary: #003366;
-            --secondary: #00509d;
-            --accent: #ffbc00;
-            --bg: #f0f2f5;
-            --text: #333;
-        }
-        body { font-family: 'Segoe UI', system-ui, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; }
-        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 60px 20px; text-align: center; border-bottom: 8px solid var(--accent); }
-        header h1 { margin: 0; font-size: 2.8em; text-transform: uppercase; letter-spacing: 2px; }
-        .author { font-size: 1.4em; margin-top: 10px; opacity: 0.9; }
-        .container { max-width: 900px; margin: -40px auto 40px; padding: 0 20px; }
-        .card { background: white; border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-top: 5px solid var(--secondary); transition: transform 0.3s ease; }
-        .card:hover { transform: translateY(-5px); }
-        h2 { color: var(--primary); display: flex; align-items: center; gap: 10px; }
-        .formula-box { background: #2c3e50; color: #fff; padding: 20px; border-radius: 10px; font-family: 'Consolas', monospace; text-align: center; font-size: 1.2em; margin: 15px 0; border: 2px solid var(--accent); }
-        .variable-tag { display: inline-block; background: #eef2f7; padding: 5px 12px; border-radius: 20px; margin: 5px; font-size: 0.85em; font-weight: 600; color: var(--secondary); }
-        .badge { background: var(--accent); color: var(--primary); padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 0.9em; margin-bottom: 20px; display: inline-block; }
-        footer { text-align: center; padding: 40px; color: #777; font-size: 0.9em; }
+        :root { --primary: #002855; --secondary: #0056b3; --accent: #ffcc00; --bg: #f8f9fa; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); color: #333; margin: 0; }
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 50px 20px; text-align: center; border-bottom: 5px solid var(--accent); }
+        .container { max-width: 1000px; margin: 20px auto; padding: 20px; }
+        .card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-top: 4px solid var(--secondary); }
+        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .formula-box { background: #1e272e; color: #00d8ff; padding: 15px; border-radius: 8px; font-family: 'Consolas', monospace; font-size: 1.1em; margin: 15px 0; overflow-x: auto; }
+        .var-tag { background: #e9ecef; padding: 4px 10px; border-radius: 15px; font-size: 0.85em; font-weight: bold; margin-right: 5px; color: #444; }
+        .method-badge { background: var(--accent); color: #000; padding: 3px 10px; border-radius: 5px; font-size: 0.75em; font-weight: bold; vertical-align: middle; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="badge"><i class="fas fa-microchip"></i> INGENIERÍA</div>
-    <h1>Compendio de Fórmulas</h1>
-    <div class="author">Mecánica de Sólidos I</div>
-    <p style="font-weight: bold; font-size: 1.5em; margin-top: 15px;">William Reynaldo Funes Andrade</p>
+    <h1>COMPENDIO DE MECÁNICA DE SÓLIDOS</h1>
+    <p style="font-size: 1.3em;">William Reynaldo Funes Andrade</p>
 </header>
 
 <div class="container">
+
     <section class="card">
-        <h2><i class="fas fa-vector-square"></i> 1. Herramientas Vectoriales</h2>
-        <p>Fundamentos matemáticos para la descomposición y análisis de fuerzas en elementos estructurales.</p>
+        <h2><i class="fas fa-layer-group"></i> 1. Análisis Vectorial Completo</h2>
         
-        <h3>Producto Escalar (Punto)</h3>
-        <div class="formula-box">A · B = |A| |B| cos(θ)</div>
-        <p><strong>Aplicación:</strong> Útil para hallar la proyección de una fuerza sobre una barra o el ángulo entre dos cables.</p>
-        <div>
-            <span class="variable-tag">A, B: Magnitudes</span>
-            <span class="variable-tag">θ: Ángulo</span>
-            <span class="variable-tag">Ax, Ay: Componentes</span>
+        <h3>Producto Escalar (Punto) <span class="method-badge">2D / 3D</span></h3>
+        <p>Aplicación: Cálculo del ángulo entre vectores y proyecciones de fuerza.</p>
+        <div class="formula-box">
+            A · B = AxBx + AyBy + AzBz <br>
+            A · B = |A| |B| cos(θ)
         </div>
+        <p class="var-list">
+            <span class="var-tag">A, B = Magnitudes</span> <span class="var-tag">θ = Ángulo</span> <span class="var-tag">Ax, Ay, Az = Componentes</span>
+        </p>
 
         <h3>Producto Vectorial (Cruz)</h3>
-        <div class="formula-box">M = r × F</div>
-        <p><strong>Aplicación:</strong> Cálculo de momentos de fuerza respecto a un punto, clave para analizar la tendencia al giro de un sólido.</p>
+        <p>Aplicación: Determinación de momentos de fuerza (torque).</p>
+        <div class="formula-box">
+            a × b = (aybz - azby)i - (axbz - azbx)j + (axby - aybx)k <br>
+            |a × b| = |a| |b| sen(α)
+        </div>
+        
     </section>
 
     <section class="card">
-        <h2><i class="fas fa-balance-scale"></i> 2. Equilibrio del Cúerpo Sólido</h2>
-        <div class="formula-box">ΣF = 0 &nbsp; | &nbsp; ΣM = 0</div>
-        <p><strong>Definición:</strong> Condición fundamental donde la resultante de fuerzas y momentos es nula, asegurando la estabilidad del sistema.</p>
-        <p>En el plano (2D): <span class="variable-tag">ΣFx = 0</span> <span class="variable-tag">ΣFy = 0</span>.</p>
+        <h2><i class="fas fa-calculator"></i> 2. Resultantes de Sistemas de Fuerzas</h2>
+        
+        <h3>Método Analítico (Componentes)</h3>
+        <p>Aplicación: Obtención de la fuerza única equivalente.</p>
+        <div class="formula-box">
+            Rx = ΣFix = Σ(Fi cos θi) <br>
+            Ry = ΣFiy = Σ(Fi sen θi) <br>
+            R = √(Rx² + Ry²) | θR = arctan(Ry / Rx)
+        </div>
+
+        <h3>Magnitud en el Espacio (3D)</h3>
+        <div class="formula-box">||F|| = √(Fx² + Fy² + Fz²)</div>
+        <p>Aplicación: Modulo del vector fuerza en un sistema tridimensional.</p>
+
+        <h3>Método Trigonométrico <span class="method-badge">Ley del Coseno</span></h3>
+        <div class="formula-box">R = √(F1² + F2² + 2F1F2 cos θ)</div>
+        <p>Aplicación: Resultante de dos fuerzas concurrentes con ángulo θ.</p>
+        <div class="formula-box">tan α = (F2 sen θ) / (F1 + F2 cos θ)</div>
     </section>
 
     <section class="card">
-        <h2><i class="fas fa-clipboard-list"></i> 3. Metodología: DCL</h2>
-        <p>Procedimiento sistemático para resolver problemas de equilibrio:</p>
+        <h2><i class="fas fa-balance-scale"></i> 3. Equilibrio de la Partícula</h2>
+        <p>La condición de equilibrio exige que la resultante sea igual a cero.</p>
+        <div class="formula-box">
+            ΣFx = 0 | ΣFy = 0 | ΣFz = 0 <br>
+            R = ΣFi = 0
+        </div>
+        
+    </section>
+
+    <section class="card">
+        <h2><i class="fas fa-list-ol"></i> 4. Caracterización y Metodología</h2>
+        <h3>Tipos de Fuerzas:</h3>
+        <ul>
+            <li><strong>Peso:</strong> W = m · g (Fuerza vertical hacia abajo)</li>
+            <li><strong>Normal (N):</strong> Reacción perpendicular a la superficie</li>
+            <li><strong>Tensión (T):</strong> Transmitida por cables (siempre a lo largo del cable)</li>
+            <li><strong>Fricción (f):</strong> Paralela a la superficie, se opone al movimiento</li>
+        </ul>
+
+        <h3>Procedimiento DCL:</h3>
         <ol>
-            <li><strong>Aislar:</strong> Representar el nodo o sólido como un punto.</li>
-            <li><strong>Diagramar:</strong> Dibujar todas las fuerzas externas y reacciones.</li>
-            <li><strong>Ejes:</strong> Definir coordenadas alineadas a los apoyos.</li>
-            <li><strong>Resolver:</strong> Aplicar ΣF=0 para despejar incógnitas.</li>
+            <li>Aislar la partícula (punto).</li>
+            <li>Dibujar el DCL con todas las fuerzas, magnitudes y ángulos.</li>
+            <li>Elegir sistema de coordenadas (x, y, z).</li>
+            <li>Descomponer fuerzas y aplicar ecuaciones de equilibrio.</li>
         </ol>
     </section>
 
-    <section class="card" style="border-top: 5px solid var(--accent);">
-        <h2><i class="fas fa-info-circle"></i> 4. Tipos de Cargas Comunes</h2>
-        <ul>
-            <li><strong>Peso (W = m·g):</strong> Carga gravitacional vertical.</li>
-            <li><strong>Normal (N):</strong> Reacción perpendicular a la superficie.</li>
-            <li><strong>Tensión (T):</strong> Fuerza axial dirigida a lo largo del cable.</li>
-            <li><strong>Fricción (f):</strong> Fuerza tangencial opuesta al deslizamiento.</li>
-        </ul>
-    </section>
 </div>
 
 <footer>
-    <p>© 2026 | William Reynaldo Funes Andrade | Trabajo Individual Original</p>
-    <p>Mecánica de Sólidos - Facultad de Ingeniería</p>
+    <p>Trabajo Original por William Reynaldo Funes Andrade © 2026</p>
 </footer>
 
 </body>
