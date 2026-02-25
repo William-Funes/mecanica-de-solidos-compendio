@@ -3,105 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mecánica de Sólidos | William Funes</title>
+    <title>William Funes | Mecánica de Sólidos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #002855; --secondary: #0056b3; --accent: #ffcc00; --bg: #f8f9fa; }
-        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); color: #333; margin: 0; }
-        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 50px 20px; text-align: center; border-bottom: 5px solid var(--accent); }
-        .container { max-width: 1000px; margin: 20px auto; padding: 20px; }
-        .card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-top: 4px solid var(--secondary); }
-        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .formula-box { background: #1e272e; color: #00d8ff; padding: 15px; border-radius: 8px; font-family: 'Consolas', monospace; font-size: 1.1em; margin: 15px 0; overflow-x: auto; }
-        .var-tag { background: #e9ecef; padding: 4px 10px; border-radius: 15px; font-size: 0.85em; font-weight: bold; margin-right: 5px; color: #444; }
-        .method-badge { background: var(--accent); color: #000; padding: 3px 10px; border-radius: 5px; font-size: 0.75em; font-weight: bold; vertical-align: middle; }
+        :root {
+            --primary: #003366; /* Azul Ingeniería */
+            --secondary: #00509d;
+            --accent: #ffbc00; /* Dorado para resaltar */
+            --bg: #f4f7f6;
+            --text: #2c3e50;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; }
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 60px 20px; text-align: center; border-bottom: 8px solid var(--accent); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        header h1 { margin: 0; font-size: 3em; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .author { font-size: 1.5em; margin-top: 15px; font-weight: 300; font-style: italic; }
+        .container { max-width: 950px; margin: -30px auto 50px; padding: 0 20px; }
+        .card { background: white; border-radius: 15px; padding: 35px; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-left: 8px solid var(--secondary); transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-8px); }
+        h2 { color: var(--primary); display: flex; align-items: center; gap: 12px; font-size: 1.8em; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .formula-container { background: #1e272e; color: #00d8ff; padding: 25px; border-radius: 12px; font-family: 'Consolas', 'Courier New', monospace; text-align: center; font-size: 1.3em; margin: 20px 0; border: 2px dashed var(--accent); position: relative; }
+        .variable-chip { display: inline-block; background: #eef2f7; padding: 6px 14px; border-radius: 25px; margin: 6px; font-size: 0.9em; font-weight: bold; color: var(--primary); border: 1px solid #d1d8e0; }
+        .app-note { background: #fff9e6; border-left: 4px solid var(--accent); padding: 10px 15px; font-size: 0.95em; margin: 15px 0; }
+        footer { text-align: center; padding: 50px; background: var(--primary); color: white; margin-top: 40px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>COMPENDIO DE MECÁNICA DE SÓLIDOS</h1>
-    <p style="font-size: 1.3em;">William Reynaldo Funes Andrade</p>
+    <h1>Fórmulas de Mecánica de Sólidos</h1>
+    <div class="author">William Reynaldo Funes Andrade</div>
 </header>
 
 <div class="container">
-
     <section class="card">
-        <h2><i class="fas fa-layer-group"></i> 1. Análisis Vectorial Completo</h2>
+        <h2><i class="fas fa-drafting-compass"></i> I. Fundamentos de Análisis Vectorial</h2>
+        <p>Herramientas matemáticas esenciales para la representación de fuerzas concurrentes en el espacio[cite: 27, 28, 30].</p>
         
-        <h3>Producto Escalar (Punto) <span class="method-badge">2D / 3D</span></h3>
-        <p>Aplicación: Cálculo del ángulo entre vectores y proyecciones de fuerza.</p>
-        <div class="formula-box">
-            A · B = AxBx + AyBy + AzBz <br>
-            A · B = |A| |B| cos(θ)
+        <h3>Producto Escalar (Punto)</h3>
+        <div class="formula-container">
+            A · B = |A| |B| cos(θ) <br>
+            A · B = AxBx + AyBy + AzBz
         </div>
-        <p class="var-list">
-            <span class="var-tag">A, B = Magnitudes</span> <span class="var-tag">θ = Ángulo</span> <span class="var-tag">Ax, Ay, Az = Componentes</span>
-        </p>
+        <div class="app-note"><strong>Aplicación:</strong> Determinación del ángulo entre fuerzas o proyección de cargas sobre elementos estructurales[cite: 1, 5, 8].</div>
+        <div>
+            <span class="variable-chip">A, B: Magnitudes</span>
+            <span class="variable-chip">θ: Ángulo entre vectores</span>
+            <span class="variable-chip">Ax, Ay, Az: Componentes rectangulares</span>
+        </div>
 
         <h3>Producto Vectorial (Cruz)</h3>
-        <p>Aplicación: Determinación de momentos de fuerza (torque).</p>
-        <div class="formula-box">
-            a × b = (aybz - azby)i - (axbz - azbx)j + (axby - aybx)k <br>
-            |a × b| = |a| |b| sen(α)
+        <div class="formula-container">
+            M = r × F = det | i j k ; rx ry rz ; Fx Fy Fz |
         </div>
-        
+        <div class="app-note"><strong>Aplicación:</strong> Cálculo de momentos de torsión o flexión respecto a un punto[cite: 10, 11].</div>
     </section>
 
     <section class="card">
-        <h2><i class="fas fa-calculator"></i> 2. Resultantes de Sistemas de Fuerzas</h2>
+        <h2><i class="fas fa-calculator"></i> II. Determinación de la Resultante</h2>
+        <p>Cálculo del efecto neto de un sistema de fuerzas que actúan sobre una partícula[cite: 39, 40].</p>
         
-        <h3>Método Analítico (Componentes)</h3>
-        <p>Aplicación: Obtención de la fuerza única equivalente.</p>
-        <div class="formula-box">
-            Rx = ΣFix = Σ(Fi cos θi) <br>
-            Ry = ΣFiy = Σ(Fi sen θi) <br>
-            R = √(Rx² + Ry²) | θR = arctan(Ry / Rx)
+        <h3>Magnitud de la Resultante (2D)</h3>
+        <div class="formula-container">
+            R = √(Rx² + Ry²) <br>
+            θR = arctan(Ry / Rx)
         </div>
+        <div class="app-note"><strong>Aplicación:</strong> Simplificación de fuerzas en el plano cartesiano para análisis de soportes[cite: 47, 49].</div>
 
-        <h3>Magnitud en el Espacio (3D)</h3>
-        <div class="formula-box">||F|| = √(Fx² + Fy² + Fz²)</div>
-        <p>Aplicación: Modulo del vector fuerza en un sistema tridimensional.</p>
-
-        <h3>Método Trigonométrico <span class="method-badge">Ley del Coseno</span></h3>
-        <div class="formula-box">R = √(F1² + F2² + 2F1F2 cos θ)</div>
-        <p>Aplicación: Resultante de dos fuerzas concurrentes con ángulo θ.</p>
-        <div class="formula-box">tan α = (F2 sen θ) / (F1 + F2 cos θ)</div>
+        <h3>Método Trigonométrico (Ley del Coseno)</h3>
+        <div class="formula-container">
+            R = √(F1² + F2² + 2F1F2 cos θ)
+        </div>
+        <div class="app-note"><strong>Aplicación:</strong> Resolución rápida para dos fuerzas concurrentes cuando se conoce el ángulo entre ellas[cite: 53, 57].</div>
     </section>
 
     <section class="card">
-        <h2><i class="fas fa-balance-scale"></i> 3. Equilibrio de la Partícula</h2>
-        <p>La condición de equilibrio exige que la resultante sea igual a cero.</p>
-        <div class="formula-box">
-            ΣFx = 0 | ΣFy = 0 | ΣFz = 0 <br>
-            R = ΣFi = 0
+        <h2><i class="fas fa-balance-scale"></i> III. Equilibrio de la Partícula</h2>
+        <p>Condiciones estáticas donde la aceleración del sistema es nula[cite: 31, 33].</p>
+        <div class="formula-container">
+            ΣFx = 0 | ΣFy = 0 | ΣFz = 0
         </div>
-        
+        <div class="app-note"><strong>Aplicación:</strong> Cálculo de tensiones en cables y reacciones en apoyos fijos o móviles[cite: 32, 38].</div>
     </section>
 
-    <section class="card">
-        <h2><i class="fas fa-list-ol"></i> 4. Caracterización y Metodología</h2>
-        <h3>Tipos de Fuerzas:</h3>
-        <ul>
-            <li><strong>Peso:</strong> W = m · g (Fuerza vertical hacia abajo)</li>
-            <li><strong>Normal (N):</strong> Reacción perpendicular a la superficie</li>
-            <li><strong>Tensión (T):</strong> Transmitida por cables (siempre a lo largo del cable)</li>
-            <li><strong>Fricción (f):</strong> Paralela a la superficie, se opone al movimiento</li>
-        </ul>
-
-        <h3>Procedimiento DCL:</h3>
+    <section class="card" style="border-left-color: var(--accent);">
+        <h2><i class="fas fa-project-diagram"></i> IV. Procedimiento de Análisis (DCL)</h2>
+        <p>Pasos sistemáticos para la resolución de problemas técnicos[cite: 85]:</p>
         <ol>
-            <li>Aislar la partícula (punto).</li>
-            <li>Dibujar el DCL con todas las fuerzas, magnitudes y ángulos.</li>
-            <li>Elegir sistema de coordenadas (x, y, z).</li>
-            <li>Descomponer fuerzas y aplicar ecuaciones de equilibrio.</li>
+            <li><strong>Aislar la partícula:</strong> Representarla como un punto geométrico[cite: 86, 87].</li>
+            <li><strong>Diagrama de Cuerpo Libre (DCL):</strong> Dibujar todas las fuerzas externas, pesos y tensiones[cite: 88, 89].</li>
+            <li><strong>Descomposición:</strong> Convertir fuerzas inclinadas en componentes escalares[cite: 95, 96].</li>
+            <li><strong>Ecuaciones de Equilibrio:</strong> Sumar componentes e igualar a cero para despejar incógnitas[cite: 99, 100].</li>
         </ol>
     </section>
-
 </div>
 
 <footer>
-    <p>Trabajo Original por William Reynaldo Funes Andrade © 2026</p>
+    <p>© 2026 | <strong>William Reynaldo Funes Andrade</strong></p>
+    <p>Facultad de Ingeniería - Mecánica de Sólidos I</p>
+    <p><i class="fab fa-github"></i> Publicado vía GitHub Pages</p>
 </footer>
 
 </body>
