@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compendio: Mecánica de Sólidos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css">
+    <style>
+        :root { --main-color: #2c3e50; --accent-color: #2980b9; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; color: #333; }
+        .card { border-left: 5px solid var(--accent-color); background: #fdfdfd; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: var(--main-color); border-bottom: 2px solid #eee; }
+        .formula { background: #2c3e50; color: #fff; padding: 15px; border-radius: 6px; font-family: monospace; display: block; margin: 10px 0; text-align: center; overflow-x: auto; }
+        .var-list { font-size: 0.9em; font-style: italic; color: #666; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Compendio Individual: Mecánica de Sólidos</h1>
+        <p><strong>Estudiante:</strong> [Tu Nombre] | <strong>Unidad:</strong> Análisis de Fuerzas y Equilibrio</p>
+    </header>
+
+    <section>
+        <h2>I. Análisis Vectorial de Cargas</h2>
+        <div class="card">
+            <h3>Producto Escalar (Punto)</h3>
+            <span class="formula">A · B = AxBx + AyBy + AzBz = |A||B| cos(θ)</span>
+            <p><strong>Aplicación:</strong> Determinación del ángulo entre fuerzas o proyección de una carga sobre un eje estructural[cite: 5, 8].</p>
+            <p class="var-list">Variables: A, B (magnitudes), θ (ángulo), Ax, Ay, Az (componentes)[cite: 4, 5].</p>
+        </div>
+
+        <div class="card">
+            <h3>Producto Vectorial (Cruz)</h3>
+            <span class="formula">a × b = det | i j k ; ax ay az ; bx by bz |</span>
+            <p><strong>Aplicación:</strong> Cálculo de momentos (torque) en soportes y elementos sólidos[cite: 10].</p>
+            <p class="var-list">Variables: i, j, k (vectores unitarios), a, b (vectores de posición o fuerza)[cite: 10].</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>II. Equilibrio del Cuerpo Sólido</h2>
+        <div class="card">
+            <h3>Condición de Equilibrio</h3>
+            <span class="formula">ΣFx = 0 | ΣFy = 0 | ΣFz = 0 | ΣM = 0</span>
+            <p><strong>Aplicación:</strong> Garantizar la estabilidad de la partícula o sólido antes del análisis de esfuerzos internos[cite: 31, 38, 70].</p>
+        </div>
+
+        <div class="card">
+            <h3>Cálculo de la Resultante</h3>
+            <span class="formula">R = √(Rx² + Ry²) | θ = arctan(Ry/Rx)</span>
+            <p><strong>Aplicación:</strong> Simplificación de múltiples fuerzas concurrentes en una carga única[cite: 47, 49].</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>III. Caracterización de Fuerzas</h2>
+        <div class="card">
+            <ul>
+                <li><strong>Peso (W = m·g):</strong> Fuerza vertical por gravedad[cite: 73, 74].</li>
+                <li><strong>Tensión (T):</strong> Fuerza axial en cables o cuerdas[cite: 76, 77].</li>
+                <li><strong>Normal (N):</strong> Reacción perpendicular a la superficie[cite: 75].</li>
+                <li><strong>Fricción (f):</strong> Fuerza tangencial opuesta al movimiento[cite: 79, 81].</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>IV. Metodología de Resolución (DCL)</h2>
+        <div class="card">
+            <ol>
+                <li>Aislar el elemento sólido o partícula[cite: 86].</li>
+                <li>Dibujar el Diagrama de Cuerpo Libre (DCL) con todas las fuerzas y ángulos[cite: 89, 90].</li>
+                <li>Establecer el sistema de coordenadas (x, y, z)[cite: 92, 93].</li>
+                <li>Descomponer fuerzas inclinadas y aplicar ΣF = 0[cite: 95, 99].</li>
+            </ol>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p><em>Trabajo elaborado siguiendo los criterios de la rúbrica de Mecánica de Sólidos.</em></p>
+    </footer>
+</body>
+</html>
