@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --primary: #002855; --secondary: #0056b3; --accent: #ffcc00; --bg: #f8f9fa; --card-bg: #ffffff; }
-        body { font-family: 'Inter', 'Segoe UI', sans-serif; background-color: var(--bg); color: #333; margin: 0; line-height: 1.6; }
-        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 5rem 1rem; text-align: center; border-bottom: 6px solid var(--accent); }
-        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
-        .author-name { font-size: 1.5rem; font-weight: 300; margin-top: 10px; color: var(--accent); }
-        .container { max-width: 1000px; margin: -40px auto 50px; padding: 0 20px; }
-        .section-title { background: var(--primary); color: white; padding: 10px 20px; border-radius: 8px; display: inline-block; margin-bottom: 20px; font-size: 0.9rem; text-transform: uppercase; font-weight: bold; }
-        .card { background: var(--card-bg); border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: 0.3s; border: 1px solid #eee; }
-        .card:hover { transform: translateY(-5px); }
-        h2 { color: var(--primary); margin-top: 0; border-bottom: 2px solid var(--bg); padding-bottom: 10px; }
-        .formula-box { background: #1a1a1a; color: #5ef7ff; padding: 20px; border-radius: 10px; font-family: 'Fira Code', monospace; font-size: 1.1rem; text-align: center; margin: 20px 0; line-height: 1.8; }
-        .tag { display: inline-block; background: #e9ecef; color: #495057; padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; margin: 4px; }
-        .method-list { padding-left: 20px; border-left: 3px solid var(--accent); }
-        footer { text-align: center; padding: 40px; color: #6c757d; font-size: 0.85rem; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: var(--bg); color: #333; margin: 0; line-height: 1.6; }
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 4rem 1rem; text-align: center; border-bottom: 6px solid var(--accent); }
+        .author-name { font-size: 1.8rem; font-weight: bold; color: var(--accent); margin-top: 10px; }
+        .container { max-width: 1000px; margin: -30px auto 50px; padding: 0 20px; }
+        .week-badge { background: var(--primary); color: white; padding: 5px 15px; border-radius: 4px; font-weight: bold; margin-bottom: 10px; display: inline-block; }
+        .card { background: var(--card-bg); border-radius: 12px; padding: 40px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee; }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-top: 0; }
+        h3 { color: var(--secondary); margin-top: 25px; }
+        .formula-box { background: #1a1a1a; color: #5ef7ff; padding: 25px; border-radius: 10px; font-family: 'Consolas', monospace; font-size: 1.2rem; text-align: center; margin: 20px 0; border: 1px solid var(--secondary); }
+        .explanation { text-align: justify; margin-bottom: 15px; }
+        .example-box { background: #fff9e6; border-left: 5px solid var(--accent); padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .example-title { font-weight: bold; color: #856404; display: block; margin-bottom: 5px; text-transform: uppercase; font-size: 0.85rem; }
+        footer { text-align: center; padding: 40px; color: #666; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -27,76 +27,121 @@
 <header>
     <h1>Fórmulas de Mecánica de Sólidos</h1>
     <div class="author-name">William Reynaldo Funes Andrade</div>
-    <p>Compendio Técnico | Ingeniería Civil</p>
+    <p>Compendio Académico Detallado | Semanas 2, 3 y 4</p>
 </header>
 
 <div class="container">
 
     <div class="card">
-        <div class="section-title">Semana 2 y 3</div>
-        <h2>Operaciones Vectoriales y Unitarios</h2>
-        <p>Fundamentos para la suma de fuerzas y representación de dirección.</p>
+        <span class="week-badge">Semana 2</span>
+        <h2>I. Vectores y Operaciones en el Plano (2D)</h2>
+        <div class="explanation">
+            Un vector es una magnitud física que requiere magnitud, dirección y sentido. En la mecánica, representamos las fuerzas como vectores para entender cómo afectan a una estructura.
+        </div>
+
+        <h3>1. Componentes Rectangulares</h3>
+        <div class="explanation">
+            Permite descomponer una fuerza inclinada en sus efectos horizontales (X) y verticales (Y). Es el primer paso para cualquier análisis de equilibrio.
+        </div>
+        <div class="formula-box">
+            Fx = F · cos(θ) <br>
+            Fy = F · sen(θ)
+        </div>
+        <div class="example-box">
+            <span class="example-title">Ejemplo de Uso</span>
+            Si aplicas una fuerza de 100N a 30° sobre una viga, 86.6N actúan empujando la viga a lo largo (Fx) y 50N actúan intentando doblarla hacia abajo (Fy).
+        </div>
+
+        <h3>2. Magnitud y Dirección (Resultante)</h3>
+        <div class="formula-box">
+            F = √(Fx² + Fy²) <br>
+            θ = arctan(Fy / Fx)
+        </div>
+        <div class="explanation">
+            Se usa para encontrar la fuerza total y el ángulo exacto cuando conocemos las componentes individuales.
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <span class="week-badge">Semana 3</span>
+        <h2>II. Multiplicación Vectorial y Vectores Unitarios</h2>
         
+        <h3>1. Vector Unitario (λ)</h3>
+        <div class="explanation">
+            El vector unitario define la dirección pura de una fuerza sin importar su tamaño. Su magnitud siempre es 1. Es vital para orientar fuerzas en cables.
+        </div>
+        <div class="formula-box">
+            λ = F / ||F|| = (Fx/F)i + (Fy/F)j + (Fz/F)k
+        </div>
+
+        <h3>2. Producto Escalar (Punto)</h3>
+        <div class="explanation">
+            Se utiliza para calcular el trabajo mecánico o para encontrar la proyección de una fuerza sobre una línea de acción específica.
+        </div>
         <div class="formula-box">
             A · B = AxBx + AyBy + AzBz <br>
-            λ = F / ||F|| = cos θx i + cos θy j + cos θz k
+            A · B = |A| |B| cos(θ)
         </div>
-        
-        <p><strong>Variables:</strong> 
-            <span class="tag">λ: Vector Unitario</span>
-            <span class="tag">||F||: Magnitud</span>
-            <span class="tag">Ax, Ay, Az: Componentes</span>
-        </p>
+        <div class="example-box">
+            <span class="example-title">Uso Técnico</span>
+            Si quieres saber cuánta de la fuerza de un cable se transmite realmente a un poste inclinado, usas el producto escalar entre el vector fuerza y el vector dirección del poste.
+        </div>
     </div>
+    
+
+[Image of the dot product and cross product of vectors]
+
 
     <div class="card">
-        <div class="section-title">Semana 4</div>
-        <h2>Fuerzas en el Espacio (3D)</h2>
-        <p>Uso de Cosenos Directores para la resolución de componentes tridimensionales.</p>
-        
-        <div class="formula-box">
-            Fx = F cos θx | Fy = F cos θy | Fz = F cos θz <br>
-            cos² θx + cos² θy + cos² θz = 1
+        <span class="week-badge">Semana 4</span>
+        <h2>III. Estática en 3D y Cosenos Directores</h2>
+        <div class="explanation">
+            En el mundo real, las estructuras son tridimensionales. Aquí usamos tres ángulos (α, β, γ) para localizar la fuerza respecto a los ejes X, Y y Z.
         </div>
-        
-        <p><strong>Aplicación:</strong> Determinar la orientación de una carga en estructuras espaciales mediante los ángulos directores.</p>
+
+        <h3>1. Componentes en el Espacio</h3>
+        <div class="formula-box">
+            Fx = F cos(α) | Fy = F cos(β) | Fz = F cos(γ) <br>
+            cos²(α) + cos²(β) + cos²(γ) = 1
+        </div>
+        <div class="explanation">
+            La propiedad de que la suma de los cuadrados de los cosenos es 1 permite hallar un ángulo faltante si conocemos los otros dos.
+        </div>
+
+        <h3>2. Primera Ley de Newton (Equilibrio)</h3>
+        <div class="explanation">
+            Un cuerpo está en equilibrio si la resultante de todas las fuerzas es cero. En 3D, esto genera tres ecuaciones independientes.
+        </div>
+        <div class="formula-box">
+            ΣFx = 0 | ΣFy = 0 | ΣFz = 0
+        </div>
+        <div class="example-box">
+            <span class="example-title">Ejemplo de Uso</span>
+            Para que un semáforo colgado de tres cables no caiga ni se mueva, las tensiones de los cables en cada eje deben sumar cero.
+        </div>
     </div>
+    
 
     <div class="card">
-        <div class="section-title">Semana 4</div>
-        <h2>Equilibrio de la Partícula</h2>
-        <p>Aplicación de la Primera Ley de Newton para sistemas en reposo.</p>
-        
-        <div class="formula-box">
-            ΣF = 0 &nbsp; ⮕ &nbsp; ΣFx = 0, ΣFy = 0, ΣFz = 0
+        <h2>IV. Metodología de Resolución (DCL)</h2>
+        <div class="explanation">
+            El <strong>Diagrama de Cuerpo Libre</strong> es la herramienta gráfica más importante. Según los contenidos revisados, los pasos obligatorios son:
         </div>
-        
-        <div class="method-list">
-            <p><strong>Metodología DCL:</strong></p>
-            <ol>
-                <li>Aislar la partícula de su entorno.</li>
-                <li>Identificar todas las fuerzas (Peso, Normal, Tensión, Fricción).</li>
-                <li>Establecer ejes de referencia (x, y, z).</li>
-                <li>Resolver sistema de ecuaciones lineales.</li>
-            </ol>
-        </div>
+        <ul>
+            <li><strong>Identificar:</strong> Todas las fuerzas (Peso, Normal, Tensión).</li>
+            <li><strong>Ejes:</strong> Colocar el origen en la partícula analizada.</li>
+            <li><strong>Descomponer:</strong> Convertir ángulos en componentes rectangulares.</li>
+            <li><strong>Ecuaciones:</strong> Plantear las sumatorias de fuerzas según la 1ra Ley de Newton.</li>
+        </ul>
     </div>
-
-    <div class="card">
-        <div class="section-title">General</div>
-        <h2>Resultante y Trigonometría</h2>
-        <div class="formula-box">
-            R = √(F1² + F2² + 2F1F2 cos θ) <br>
-            θR = arctan(Ry / Rx)
-        </div>
-        <p>Basado en el método analítico y trigonométrico para fuerzas concurrentes.</p>
-    </div>
+    
 
 </div>
 
 <footer>
-    <p>© 2026 | William Reynaldo Funes Andrade</p>
-    <p>Mecánica de Sólidos I | Facultad de Ingeniería</p>
+    <p><strong>William Reynaldo Funes Andrade</strong></p>
+    <p>Ingeniería Civil | Universidad Gerardo Barrios</p>
 </footer>
 
 </body>
