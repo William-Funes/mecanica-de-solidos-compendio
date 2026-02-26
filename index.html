@@ -3,127 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>William Funes | Compendio Maestro Mecánica de Sólidos I</title>
+    <title>UGB | Mecánica de Sólidos I - William Funes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #0a2e52; --secondary: #1a508b; --accent: #ffcc00; --bg: #f8f9fa; --danger: #d63031; }
+        :root { --primary: #002855; --secondary: #0056b3; --accent: #ffcc00; --bg: #f8f9fa; --dark: #1e272e; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); color: #2d3436; margin: 0; line-height: 1.6; }
-        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 60px 20px; text-align: center; border-bottom: 8px solid var(--accent); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-        .author-info { background: rgba(255,255,255,0.15); padding: 15px 30px; border-radius: 50px; display: inline-block; margin-top: 20px; border: 1px solid var(--accent); font-size: 1.2rem; font-weight: bold; }
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 60px 20px; text-align: center; border-bottom: 8px solid var(--accent); }
+        .author-box { background: rgba(255,255,255,0.1); padding: 10px 30px; border-radius: 50px; display: inline-block; margin-top: 20px; border: 1px solid var(--accent); font-weight: bold; }
         .container { max-width: 1100px; margin: -40px auto 80px; padding: 0 20px; }
-        .card { background: white; border-radius: 15px; padding: 40px; margin-bottom: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 6px solid var(--secondary); }
-        h2 { color: var(--primary); font-size: 1.8rem; border-bottom: 2px solid #eee; padding-bottom: 12px; display: flex; align-items: center; gap: 15px; }
-        h3 { color: var(--secondary); margin-top: 30px; border-left: 4px solid var(--accent); padding-left: 15px; }
-        .formula-box { background: #1e272e; color: #5ef7ff; padding: 30px; border-radius: 12px; font-family: 'Consolas', 'Courier New', monospace; text-align: center; font-size: 1.4rem; margin: 25px 0; border: 1px solid #485460; box-shadow: inset 0 0 15px rgba(0,0,0,0.5); line-height: 1.8; }
-        .explanation { text-align: justify; color: #444; margin: 15px 0; }
-        .grid-laws { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px 0; }
-        .law-card { background: #fffdf2; border: 1px solid #ffeaa7; padding: 20px; border-radius: 10px; }
-        .law-title { color: var(--danger); font-weight: bold; display: block; margin-bottom: 10px; font-size: 1.1rem; }
-        .tech-list { background: #f1f2f6; padding: 20px 40px; border-radius: 10px; font-size: 0.95rem; }
-        footer { text-align: center; padding: 50px; background: var(--primary); color: white; margin-top: 40px; }
+        .card { background: white; border-radius: 15px; padding: 40px; margin-bottom: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 6px solid var(--primary); }
+        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 12px; display: flex; align-items: center; gap: 15px; }
+        .formula-box { background: var(--dark); color: #5ef7ff; padding: 25px; border-radius: 12px; font-family: 'Consolas', monospace; text-align: center; font-size: 1.3rem; margin: 20px 0; border: 1px solid #485460; line-height: 1.8; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .highlight { color: var(--secondary); font-weight: bold; }
+        footer { text-align: center; padding: 40px; background: var(--primary); color: white; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Compendio Maestro: Mecánica de Sólidos I</h1>
-    <div class="author-info">William Reynaldo Funes Andrade</div>
-    <p style="margin-top: 10px; opacity: 0.9;">Guía Técnica de Estática de Partículas y Análisis Vectorial</p>
+    <h1 style="margin:0; font-size: 2.5rem;">Universidad Gerardo Barrios</h1>
+    <h3 style="margin:10px 0; font-weight: 300; letter-spacing: 2px;">MECÁNICA DE SÓLIDOS I</h3>
+    <div class="author-box">William Reynaldo Funes Andrade</div>
 </header>
 
 <div class="container">
 
     <div class="card">
-        <h2><i class="fas fa-microchip"></i> 1. Fundamentos Físicos: Leyes de Newton</h2>
-        <div class="explanation">Base primordial de la mecánica que define la relación entre fuerzas y el estado de movimiento de los sólidos.</div>
-        
-        <div class="grid-laws">
-            <div class="law-card">
-                <span class="law-title">1ª Ley: Inercia</span>
-                <div class="formula-box" style="font-size: 1.2rem; padding: 15px;">ΣF = 0</div>
-                <p>Un cuerpo permanece en reposo o velocidad constante si la fuerza neta es nula. <strong>Es la condición de equilibrio estático.</strong></p>
+        <h2><i class="fas fa-balance-scale"></i> 1. Leyes de Newton del Movimiento</h2>
+        <div class="grid">
+            <div style="background:#f1f2f6; padding:20px; border-radius:10px;">
+                <span class="highlight">1ª Ley (Inercia):</span> ΣF = 0
+                <p><small>Condición fundamental de equilibrio para partículas en reposo.</small></p>
             </div>
-            <div class="law-card">
-                <span class="law-title">2ª Ley: Fuerza y Masa</span>
-                <div class="formula-box" style="font-size: 1.2rem; padding: 15px;">F = m · a</div>
-                <p>La aceleración es proporcional a la fuerza. Aplicación clave: <strong>Peso (W = m · g)</strong>, donde g ≈ 9.81 m/s².</p>
+            <div style="background:#f1f2f6; padding:20px; border-radius:10px;">
+                <span class="highlight">2ª Ley (Fuerza):</span> F = m · a
+                <p><small>Cálculo de <b>Peso (W) = m · g</b> (g = 9.81 m/s²).</small></p>
             </div>
-            <div class="law-card">
-                <span class="law-title">3ª Ley: Acción-Reacción</span>
-                <div class="formula-box" style="font-size: 1.2rem; padding: 15px;">F<sub>A→B</sub> = -F<sub>B→A</sub></div>
-                <p>Toda fuerza de contacto genera una reacción de igual magnitud y sentido opuesto en el otro cuerpo.</p>
+            <div style="background:#f1f2f6; padding:20px; border-radius:10px;">
+                <span class="highlight">3ª Ley (Acción/Reacción):</span> F<sub>A</sub> = -F<sub>B</sub>
+                <p><small>Fuerzas mutuas entre dos cuerpos son iguales y opuestas.</small></p>
             </div>
         </div>
     </div>
+    
 
     <div class="card">
-        <h2><i class="fas fa-drafting-compass"></i> 2. Análisis Vectorial en el Plano y Espacio</h2>
+        <h2><i class="fas fa-calculator"></i> 2. Trigonometría Aplicada a Fuerzas</h2>
+        <p>Para descomponer una fuerza inclinada en sus componentes cartesianas:</p>
+        <div class="formula-box">
+            F<sub>x</sub> = F · cos(θ) <br>
+            F<sub>y</sub> = F · sen(θ) <br>
+            θ = arctan(F<sub>y</sub> / F<sub>x</sub>)
+        </div>
         
-        <h3>2.1 Producto Escalar (Punto)</h3>
-        <div class="explanation">Indispensable para proyecciones y para determinar el ángulo entre dos líneas de acción (cables, vigas).</div>
-        <div class="formula-box">
-            A · B = |A| |B| cos(θ) <br>
-            A · B = A<sub>x</sub>B<sub>x</sub> + A<sub>y</sub>B<sub>y</sub> + A<sub>z</sub>B<sub>z</sub>
+        <h3>Leyes para Triángulos de Fuerzas (Vectores concurrentes)</h3>
+        <div class="grid">
+            <div>
+                <span class="highlight">Ley de Cosenos:</span>
+                <div class="formula-box" style="font-size: 1.1rem;">R = √(A² + B² - 2AB cos(C))</div>
+            </div>
+            <div>
+                <span class="highlight">Ley de Senos:</span>
+                <div class="formula-box" style="font-size: 1.1rem;">(A / sen a) = (B / sen b) = (R / sen c)</div>
+            </div>
         </div>
-
-        <h3>2.2 Producto Vectorial (Cruz)</h3>
-        <div class="explanation">Se utiliza para calcular el <strong>Momento (Torque)</strong>, que es la tendencia de una fuerza a hacer girar un cuerpo.</div>
-        <div class="formula-box">
-            M = r × F = det | i &nbsp; j &nbsp; k ; r<sub>x</sub> r<sub>y</sub> r<sub>z</sub> ; F<sub>x</sub> F<sub>y</sub> F<sub>z</sub> | <br>
-            |M| = |r| |F| sen(θ)
-        </div>
+        
     </div>
 
     <div class="card">
-        <h2><i class="fas fa-cube"></i> 3. Componentes Rectangulares en el Espacio</h2>
-        <div class="explanation">Análisis de cargas tridimensionales mediante ángulos y cosenos directores.</div>
+        <h2><i class="fas fa-vector-square"></i> 3. Operaciones Vectoriales</h2>
+        <h3>Producto Escalar (Punto)</h3>
+        <div class="formula-box">A · B = |A||B| cos(θ) = AxBx + AyBy + AzBz</div>
         
+        <h3>Producto Vectorial (Cruz) - Cálculo de Momentos</h3>
         <div class="formula-box">
-            F<sub>x</sub> = F cos(α) | F<sub>y</sub> = F cos(β) | F<sub>z</sub> = F cos(γ) <br>
-            F = √(F<sub>x</sub>² + F<sub>y</sub>² + F<sub>z</sub>²)
+            M = r × F = det | i &nbsp; j &nbsp; k ; r<sub>x</sub> r<sub>y</sub> r<sub>z</sub> ; F<sub>x</sub> F<sub>y</sub> F<sub>z</sub> |
         </div>
-
-        <h3>3.1 Cosenos Directores y Vector Unitario</h3>
-        <div class="explanation">El vector unitario (λ) define la dirección de la fuerza sin alterar su magnitud.</div>
-        <div class="formula-box">
-            cos²(α) + cos²(β) + cos²(γ) = 1 <br>
-            λ = (cos α)i + (cos β)j + (cos γ)k
-        </div>
+        
     </div>
 
     <div class="card">
-        <h2><i class="fas fa-cogs"></i> 4. Tipos de Fuerzas y Fórmulas Específicas</h2>
-        <div class="tech-list">
-            <ul>
-                <li><strong>Tensión (T):</strong> Fuerza dirigida a lo largo de cables o cuerdas.</li>
-                <li><strong>Fuerza Normal (N):</strong> Reacción perpendicular a la superficie de apoyo.</li>
-                <li><strong>Fricción Estática (f):</strong> f<sub>s</sub> = μ<sub>s</sub> · N (Se opone al inicio del movimiento).</li>
-                <li><strong>Resultante de Fuerzas Concurrentes:</strong> R = ΣF = (ΣF<sub>x</sub>)i + (ΣF<sub>y</sub>)j + (ΣF<sub>z</sub>)k.</li>
+        <h2><i class="fas fa-cube"></i> 4. Fuerzas en el Espacio y Vectores Unitarios</h2>
+        <div class="formula-box">
+            F = F<sub>x</sub>i + F<sub>y</sub>j + F<sub>z</sub>k <br>
+            cos²(α) + cos²(β) + cos²(γ) = 1
+        </div>
+        <p><b>Vector Unitario (λ):</b> Define la dirección de una <span class="highlight">tensión</span> en un cable:</p>
+        <div class="formula-box">λ = r<sub>AB</sub> / |r<sub>AB</sub>| &nbsp;➔&nbsp; F = F · λ</div>
+        
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-tasks"></i> 5. Caracterización de Fuerzas y DCL</h2>
+        <div class="grid">
+            <ul style="list-style: none; padding:0;">
+                <li><i class="fas fa-check-circle"></i> <b>Tensión (T):</b> Fuerza en cables, siempre "sale" del punto.</li>
+                <li><i class="fas fa-check-circle"></i> <b>Normal (N):</b> Reacción perpendicular a la superficie.</li>
+                <li><i class="fas fa-check-circle"></i> <b>Fricción (f):</b> f = μ · N.</li>
             </ul>
+            <div style="border-left: 4px solid var(--accent); padding-left: 20px;">
+                <span class="highlight">Metodología DCL:</span>
+                <ol>
+                    <li>Dibujar la partícula sola.</li>
+                    <li>Trazar TODAS las fuerzas con sus ángulos.</li>
+                    <li>Aplicar ΣFx = 0 y ΣFy = 0.</li>
+                </ol>
+            </div>
         </div>
-    </div>
-
-    <div class="card">
-        <h2><i class="fas fa-tasks"></i> 5. Metodología de Resolución: Diagrama de Cuerpo Libre (DCL)</h2>
-        <div class="explanation">Pasos lógicos para asegurar la precisión en el diseño de sistemas de ingeniería:</div>
-        <div class="tech-list" style="background: #e3f2fd; border-left: 5px solid var(--secondary);">
-            <ol>
-                <li><strong>Aislar la partícula:</strong> Representarla como un punto en el origen.</li>
-                <li><strong>Identificar Fuerzas:</strong> Dibujar todas las cargas conocidas (magnitud y dirección).</li>
-                <li><strong>Definir Incógnitas:</strong> Etiquetar tensiones o reacciones desconocidas.</li>
-                <li><strong>Elegir Ejes:</strong> Establecer un sistema x, y, z conveniente.</li>
-                <li><strong>Descomponer:</strong> Expresar cada fuerza en sus componentes cartesianas.</li>
-                <li><strong>Aplicar Ecuaciones de Equilibrio:</strong> Resolver el sistema ΣF<sub>x</sub>=0, ΣF<sub>y</sub>=0, ΣF<sub>z</sub>=0.</li>
-            </ol>
-        </div>
+        
     </div>
 
 </div>
 
 <footer>
-    <p><strong>William Reynaldo Funes Andrade</strong></p>
-    <p>Ingeniería Civil Semipresencial | Universidad Gerardo Barrios</p>
-    <p>© 2026 - Compendio para Mecánica de Sólidos I</p>
+    <p><b>Facultad de Ingeniería y Arquitectura</b></p>
+    <p>William Reynaldo Funes Andrade | Mecánica de Sólidos I | © 2026</p>
 </footer>
 
 </body>
