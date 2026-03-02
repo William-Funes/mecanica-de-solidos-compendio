@@ -3,122 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UGB | Mecánica de Sólidos I - William Funes</title>
+    <title>UGB | Compendio Completo - William Funes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --primary: #002855; --secondary: #0056b3; --accent: #ffcc00; --bg: #f8f9fa; --dark: #1e272e; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); color: #2d3436; margin: 0; line-height: 1.6; }
         header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 60px 20px; text-align: center; border-bottom: 8px solid var(--accent); }
         .author-box { background: rgba(255,255,255,0.1); padding: 10px 30px; border-radius: 50px; display: inline-block; margin-top: 20px; border: 1px solid var(--accent); font-weight: bold; }
-        .container { max-width: 1100px; margin: -40px auto 80px; padding: 0 20px; }
+        .container { max-width: 1000px; margin: -40px auto 80px; padding: 0 20px; }
         .card { background: white; border-radius: 15px; padding: 40px; margin-bottom: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 6px solid var(--primary); }
         h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 12px; display: flex; align-items: center; gap: 15px; }
         .formula-box { background: var(--dark); color: #5ef7ff; padding: 25px; border-radius: 12px; font-family: 'Consolas', monospace; text-align: center; font-size: 1.3rem; margin: 20px 0; border: 1px solid #485460; line-height: 1.8; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .highlight { color: var(--secondary); font-weight: bold; }
+        .law-item { background: #f1f2f6; padding: 15px; border-radius: 10px; margin-bottom: 10px; }
         footer { text-align: center; padding: 40px; background: var(--primary); color: white; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1 style="margin:0; font-size: 2.5rem;">Universidad Gerardo Barrios</h1>
-    <h3 style="margin:10px 0; font-weight: 300; letter-spacing: 2px;">MECÁNICA DE SÓLIDOS I</h3>
+    <h1 style="margin:0;">Universidad Gerardo Barrios</h1>
+    <h3 style="margin:10px 0; font-weight: 300;">MECÁNICA DE SÓLIDOS I</h3>
     <div class="author-box">William Reynaldo Funes Andrade</div>
 </header>
 
 <div class="container">
 
     <div class="card">
-        <h2><i class="fas fa-balance-scale"></i> 1. Leyes de Newton del Movimiento</h2>
-        <div class="grid">
-            <div style="background:#f1f2f6; padding:20px; border-radius:10px;">
-                <span class="highlight">1ª Ley (Inercia):</span> ΣF = 0
-                <p><small>Condición fundamental de equilibrio para partículas en reposo.</small></p>
-            </div>
-            <div style="background:#f1f2f6; padding:20px; border-radius:10px;">
-                <span class="highlight">2ª Ley (Fuerza):</span> F = m · a
-                <p><small>Cálculo de <b>Peso (W) = m · g</b> (g = 9.81 m/s²).</small></p>
-            </div>
-            <div style="background:#f1f2f6; padding:20px; border-radius:10px;">
-                <span class="highlight">3ª Ley (Acción/Reacción):</span> F<sub>A</sub> = -F<sub>B</sub>
-                <p><small>Fuerzas mutuas entre dos cuerpos son iguales y opuestas.</small></p>
-            </div>
-        </div>
+        <h2><i class="fas fa-balance-scale"></i> 1. Leyes de Newton</h2>
+        <div class="law-item"><b>1ª Ley (Inercia):</b> ΣF = 0 (Base de la Estática).</div>
+        <div class="law-item"><b>2ª Ley (Fuerza):</b> F = m · a ➔ <b>Peso: W = m · g</b> (g = 9.81 m/s²).</div>
+        <div class="law-item"><b>3ª Ley (Acción/Reacción):</b> F<sub>AB</sub> = -F<sub>BA</sub>.</div>
     </div>
-    
 
     <div class="card">
-        <h2><i class="fas fa-calculator"></i> 2. Trigonometría Aplicada a Fuerzas</h2>
-        <p>Para descomponer una fuerza inclinada en sus componentes cartesianas:</p>
+        <h2><i class="fas fa-calculator"></i> 2. Ángulos y Funciones Trigonométricas</h2>
+        <p>Descomposición de una fuerza <b>F</b> con ángulo <b>θ</b>:</p>
         <div class="formula-box">
             F<sub>x</sub> = F · cos(θ) <br>
             F<sub>y</sub> = F · sen(θ) <br>
-            θ = arctan(F<sub>y</sub> / F<sub>x</sub>)
+            θ = tan⁻¹(F<sub>y</sub> / F<sub>x</sub>)
         </div>
-        
-        <h3>Leyes para Triángulos de Fuerzas (Vectores concurrentes)</h3>
-        <div class="grid">
-            <div>
-                <span class="highlight">Ley de Cosenos:</span>
-                <div class="formula-box" style="font-size: 1.1rem;">R = √(A² + B² - 2AB cos(C))</div>
-            </div>
-            <div>
-                <span class="highlight">Ley de Senos:</span>
-                <div class="formula-box" style="font-size: 1.1rem;">(A / sen a) = (B / sen b) = (R / sen c)</div>
-            </div>
+        <p><b>Leyes para vectores no rectangulares:</b></p>
+        <div class="formula-box">
+            Ley de Cosenos: R = √(A² + B² - 2AB cos θ) <br>
+            Ley de Senos: (A / sen a) = (B / sen b) = (R / sen c)
         </div>
-        
     </div>
 
     <div class="card">
-        <h2><i class="fas fa-vector-square"></i> 3. Operaciones Vectoriales</h2>
-        <h3>Producto Escalar (Punto)</h3>
-        <div class="formula-box">A · B = |A||B| cos(θ) = AxBx + AyBy + AzBz</div>
+        <h2><i class="fas fa-location-arrow"></i> 3. Vector Unitario (λ)</h2>
+        <p>Define la <b>dirección y sentido</b> de una fuerza en el espacio sin cambiar su magnitud. Muy usado en <span class="highlight">Tensiones (T)</span> de cables.</p>
         
-        <h3>Producto Vectorial (Cruz) - Cálculo de Momentos</h3>
+        <p><b>Paso 1: Determinar el vector de posición (r) entre puntos A y B:</b></p>
+        <div class="formula-box">
+            r<sub>AB</sub> = (x₂-x₁)i + (y₂-y₁)j + (z₂-z₁)k
+        </div>
+
+        <p><b>Paso 2: Calcular la distancia (magnitud) entre los puntos:</b></p>
+        <div class="formula-box">
+            d = √(dx² + dy² + dz²)
+        </div>
+
+        <p><b>Paso 3: Obtener el Vector Unitario:</b></p>
+        <div class="formula-box">
+            λ = r<sub>AB</sub> / d = (cos α)i + (cos β)j + (cos γ)k
+        </div>
+
+        <p><b>Paso 4: Expresar la Fuerza en forma vectorial:</b></p>
+        <div class="formula-box">
+            F = F · λ
+        </div>
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-cube"></i> 4. Componentes y Cosenos Directores</h2>
+        <div class="formula-box">
+            F<sub>x</sub> = F cos α | F<sub>y</sub> = F cos β | F<sub>z</sub> = F cos γ <br>
+            cos² α + cos² β + cos² γ = 1
+        </div>
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-times"></i> 5. Multiplicación de Vectores</h2>
+        <p><b>Producto Escalar (Punto):</b> A · B = AxBx + AyBy + AzBz</p>
+        <p><b>Producto Vectorial (Cruz) para Momentos (M):</b></p>
         <div class="formula-box">
             M = r × F = det | i &nbsp; j &nbsp; k ; r<sub>x</sub> r<sub>y</sub> r<sub>z</sub> ; F<sub>x</sub> F<sub>y</sub> F<sub>z</sub> |
         </div>
-        
     </div>
 
     <div class="card">
-        <h2><i class="fas fa-cube"></i> 4. Fuerzas en el Espacio y Vectores Unitarios</h2>
-        <div class="formula-box">
-            F = F<sub>x</sub>i + F<sub>y</sub>j + F<sub>z</sub>k <br>
-            cos²(α) + cos²(β) + cos²(γ) = 1
-        </div>
-        <p><b>Vector Unitario (λ):</b> Define la dirección de una <span class="highlight">tensión</span> en un cable:</p>
-        <div class="formula-box">λ = r<sub>AB</sub> / |r<sub>AB</sub>| &nbsp;➔&nbsp; F = F · λ</div>
-        
-    </div>
-
-    <div class="card">
-        <h2><i class="fas fa-tasks"></i> 5. Caracterización de Fuerzas y DCL</h2>
-        <div class="grid">
-            <ul style="list-style: none; padding:0;">
-                <li><i class="fas fa-check-circle"></i> <b>Tensión (T):</b> Fuerza en cables, siempre "sale" del punto.</li>
-                <li><i class="fas fa-check-circle"></i> <b>Normal (N):</b> Reacción perpendicular a la superficie.</li>
-                <li><i class="fas fa-check-circle"></i> <b>Fricción (f):</b> f = μ · N.</li>
-            </ul>
-            <div style="border-left: 4px solid var(--accent); padding-left: 20px;">
-                <span class="highlight">Metodología DCL:</span>
-                <ol>
-                    <li>Dibujar la partícula sola.</li>
-                    <li>Trazar TODAS las fuerzas con sus ángulos.</li>
-                    <li>Aplicar ΣFx = 0 y ΣFy = 0.</li>
-                </ol>
+        <h2><i class="fas fa-clipboard-list"></i> 6. Fuerzas y Metodología DCL</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+                <ul>
+                    <li><b>Tensión (T):</b> Fuerza en cables (siempre tracción).</li>
+                    <li><b>Normal (N):</b> Reacción perpendicular al apoyo.</li>
+                    <li><b>Fricción (f):</b> f = μ · N.</li>
+                </ul>
+            </div>
+            <div style="background: #fff9db; padding: 15px; border-radius: 10px;">
+                <b>Pasos DCL:</b><br>
+                1. Aislar la partícula.<br>
+                2. Dibujar todas las fuerzas.<br>
+                3. Aplicar ΣF = 0.
             </div>
         </div>
-        
     </div>
 
 </div>
 
 <footer>
-    <p><b>Facultad de Ingeniería y Arquitectura</b></p>
-    <p>William Reynaldo Funes Andrade | Mecánica de Sólidos I | © 2026</p>
+    <p>Ingeniería Civil | Universidad Gerardo Barrios</p>
+    <p><b>William Reynaldo Funes Andrade</b> | © 2026</p>
 </footer>
 
 </body>
